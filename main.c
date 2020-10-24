@@ -9,6 +9,6 @@ int main(void)
 	len2 = _printf("mensaje de prueba");
 
 	printf("original: %d pirata %d", len, len2);
-	
+
 	return (0);
 }

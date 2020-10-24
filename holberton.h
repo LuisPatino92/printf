@@ -1,6 +1,6 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
-int _printf(const char *format, ...);
+int largo(char *string);
 
 #endif /*!HOLBERTON_H*/
