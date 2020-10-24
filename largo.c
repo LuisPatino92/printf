@@ -8,11 +8,11 @@
  * Return: The length of the string
  */
 
-int largo(char *string)
+int largo(const char *string)
 {
 	int i;
 
-	for (i = 0; *(string + i); i++)
+	for (i = 0; *(string + i) && *(string + i) != '%' ; i++)
 		;
 
 	return (i);
