@@ -8,14 +8,20 @@
 
 int _printf(const char *format, ...)
 {
-	char l;
-	va_list argumentos;
-	va_start (argumentos, format);
-	l = va_arg(argumentos, int);
+	int *indices, i;
+
+	indices = import_index(format);
+
 	write(1, format, largo(format));
-	write(1, &l, 1);
-	va_end (argumentos);
-	return (largo(format)+1);
+
+	for (i = 0; i < sizeof(indices)/sizeof(int); i++)
+	{
+		write(1, format + indices[i], largo(format + indices[i]));
+
+	}
+
+	free(indices);
+	return (largo(format) + 1);
 }
 
 

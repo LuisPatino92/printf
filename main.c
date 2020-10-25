@@ -4,11 +4,10 @@
 int main(void)
 {
 	int len, len2;
-	char texto = '+';
 
 
-	len = printf("mensaje de prueba %c\n", texto);
-	len2 = _printf("mensaje de prueba %c", texto);
+	len = printf("mensaje de prueba  mensaje  ahsd\n");
+	len2 = _printf("mensaje de prueba%cmensaje%cahsd\n");
 
 	printf("original: %d pirata %d\n\n", len, len2);
 
