@@ -6,10 +6,11 @@ int main(void)
 	int len, len2;
 
 
-	len = printf("mensaje de prueba  mensaje  ahsd\n");
-	len2 = _printf("mensaje de prueba%cmensaje%cahsd\n");
+	len = printf("mensaje%%mensaje%%mensaje");
+	printf("\n");
+	len2 = _printf("men%csaje%cmensaje%cmensaje");
 
-	printf("original: %d pirata %d\n\n", len, len2);
+	printf("\noriginal: %d pirata %d\n\n", len, len2);
 
 	return (0);
 }

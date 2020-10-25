@@ -26,7 +26,7 @@ int largo(const char *string)
  * Return: The index of %'s
  */
 
-int *import_index(const char *format, ...)
+int *import_index(int *sizeofindex, const char *format, ...)
 {
 	int *array_index, i, count = 0;
 
@@ -49,6 +49,6 @@ int *import_index(const char *format, ...)
 			count++;
 		}
 	}
-
+	*sizeofindex = count;
 	return (array_index);
 }

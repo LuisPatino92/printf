@@ -8,20 +8,23 @@
 
 int _printf(const char *format, ...)
 {
-	int *indices, i;
+	int *indices, ltotal =0, i, *sizeofindex;
 
-	indices = import_index(format);
+	indices = import_index(sizeofindex, format);
 
 	write(1, format, largo(format));
+	ltotal += largo(format);
 
-	for (i = 0; i < sizeof(indices)/sizeof(int); i++)
+	for (i = 0; i < *sizeofindex; i++)
 	{
 		write(1, format + indices[i], largo(format + indices[i]));
-
+		ltotal += largo(format + indices[i]);
 	}
 
 	free(indices);
-	return (largo(format) + 1);
+	
+	return (ltotal);
+
 }
 
 

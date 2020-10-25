@@ -7,7 +7,7 @@
 
 
 int largo(const char *string);
-int *import_index(const char *format, ...);
+int *import_index(int *sizeofindex, const char *format, ...);
 int _printf(const char *format, ...);
 
 #endif /*!HOLBERTON_H*/
