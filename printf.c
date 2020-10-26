@@ -8,23 +8,26 @@
 
 int _printf(const char *format, ...)
 {
-	int *indices, ltotal =0, i, *sizeofindex;
+	int *index, ltotal = 0, i, index_size, *sizeofindex = &index_size;
+	int *len = &ltotal;
+	va_list argument;
 
-	indices = import_index(sizeofindex, format);
+	va_start(argument, format);
 
-	write(1, format, largo(format));
-	ltotal += largo(format);
+	index = indexer(sizeofindex, format);
 
-	for (i = 0; i < *sizeofindex; i++)
+	write(1, format, length(format));
+	ltotal += length(format);
+
+	for (i = 0; i < index_size; i++)
 	{
-		write(1, format + indices[i], largo(format + indices[i]));
-		ltotal += largo(format + indices[i]);
+		assigner(argument, *(format + index[i] - 1), len);
+		write(1, format + index[i], length(format + index[i]));
+		ltotal += length(format + index[i]);
 	}
 
-	free(indices);
-	
+	va_end(argument);
+	free(index);
 	return (ltotal);
 
 }
-
-
