@@ -1,0 +1,19 @@
+.TH _PRINTF 3 2020-10-26 GNU
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+    .B_printf(“string”, -opt variable);
+#include “holberton.h”
+
+
+.SH DESCRIPTION
+.B_Printf Show the string, number or any other format specifier created by the user.
+Returns the number of characters that are printed (excluding the null byte used to end output to strings)
+
+
+.SH OPTIONS
+    -n,
+
+.SH AUTHORS
+	Luis Alejandro Patino Arboleda - Jorge Daniel Urrego Escobar

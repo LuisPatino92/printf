@@ -79,3 +79,18 @@ int pot(int x, int y)
 	}
 	return (resultado);
 }
+
+/**
+ * write_null - potetiation of x ** y
+ *
+ * @len: size
+ *
+ * Return: aux value
+ */
+
+char *write_null()
+{
+	char *aux = "(null)";
+
+	return (aux);
+}

@@ -29,6 +29,10 @@ void print_s(va_list argument, int *len)
 	char *aux;
 
 	aux = va_arg(argument, char *);
+	if (aux == NULL)
+	{
+		aux = write_null();
+	}
 	write(1, aux, length(aux));
 	*len = *len + length(aux);
 }
@@ -51,3 +55,4 @@ void print_d(va_list argument, int *len)
 	*len = *len + length(Paux);
 	free(Paux);
 }
+

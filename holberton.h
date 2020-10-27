@@ -21,7 +21,7 @@ typedef struct types
 
 int length(const char *string);
 int *indexer(int *sizeofindex, const char *format, ...);
-void assigner(va_list args, char speci, int *length);
+void assigner(va_list args, char speci, int *len);
 int _printf(const char *format, ...);
 
 
@@ -33,4 +33,5 @@ void print_unasigned(va_list argument, int *length);
 char *int_to_string(int number);
 int pot(int x, int y);
 int absolute(int n);
+char *write_null();
 #endif /*!HOLBERTON_H*/

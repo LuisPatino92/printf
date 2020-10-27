@@ -5,10 +5,10 @@
  *
  * @args: The va_arg list
  * @speci: the format specifier
- * @length: pointer to length value
+ * @len: pointer to length value
  */
 
-void assigner(va_list args, char speci, int *length)
+void assigner(va_list args, char speci, int *len)
 {
 	int i;
 	char PO = '%';
@@ -23,14 +23,14 @@ void assigner(va_list args, char speci, int *length)
 	if (speci == '%')
 	{
 		write(1, &PO, 1);
-		(*length)++;
+		(*len)++;
 		return;
 	}
 	for (i = 0; asigner[i].specifier; i++)
 	{
 		if (*(asigner[i].specifier) == speci)
 		{
-			asigner[i].solver(args, length);
+			asigner[i].solver(args, len);
 		}
 	}
 }
