@@ -84,8 +84,6 @@ int pot(int x, int y)
 /**
  * write_null - potetiation of x ** y
  *
- * @len: size
- *
  * Return: aux value
  */
 
@@ -96,16 +94,25 @@ char *write_null()
 	return (aux);
 }
 
+/**
+ * print_array_int - Print an array
+ *
+ * @array: Array to reverse
+ * @size: Size of the array
+ * @len: pointer to ltotal
+ *
+ * Return: aux value
+ */
+
 void print_array_int(int *array, int size, int *len)
 {
-	int i;
+	int i, aux;
 	/*char aux;*/
 
 	for (i = 0; i < size; i++)
 	{
-		printf("%d", *(array + i));
-		/*aux = *(array + i) + 48;
+		aux = *(array + i) + 48;
 		write(1, &aux, 1);
-		*(len) = *(len) + 1;*/
+		*(len) = *(len) + 1;
 	}
 }

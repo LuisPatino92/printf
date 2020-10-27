@@ -70,7 +70,7 @@ void print_b(va_list argument, int *len)
 
 	aux = va_arg(argument, long);
 
-	for (i = 0; aux/(pot(2, i)) >= 1; i++)
+	for (i = 0; aux / (pot(2, i)) >= 1; i++)
 		;
 
 	binary = malloc(sizeof(int) * i);
@@ -82,7 +82,7 @@ void print_b(va_list argument, int *len)
 
 	for (i = 1, j = 0; exp >= 0; exp--, i = i * 2, j++)
 	{
-		*(binary + j) = (aux/i) % 2;
+		*(binary + j) = (aux / i) % 2;
 	}
 	printf("exp vale %d", s);
 
