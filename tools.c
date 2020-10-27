@@ -11,7 +11,8 @@
 char *int_to_string(int number)
 {
 	char *num_str;
-	int len = 0, digits = 1, i, j;
+	int len = 0, digits = 1, j;
+	long i;
 
 	for (i = 10; absolute(number) / i > 0; i = i * 10)
 	{
@@ -52,7 +53,7 @@ char *int_to_string(int number)
  * Return: The absolute value
  */
 
-int absolute(int n)
+long absolute(long n)
 {
 	if (n < 0)
 		return (-1 * n);

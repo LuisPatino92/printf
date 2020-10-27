@@ -32,6 +32,6 @@ void print_unasigned(va_list argument, int *length);
 
 char *int_to_string(int number);
 int pot(int x, int y);
-int absolute(int n);
+long absolute(long n);
 char *write_null();
 #endif /*!HOLBERTON_H*/
