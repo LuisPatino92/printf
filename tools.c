@@ -95,3 +95,17 @@ char *write_null()
 
 	return (aux);
 }
+
+void print_array_int(int *array, int size, int *len)
+{
+	int i;
+	/*char aux;*/
+
+	for (i = 0; i < size; i++)
+	{
+		printf("%d", *(array + i));
+		/*aux = *(array + i) + 48;
+		write(1, &aux, 1);
+		*(len) = *(len) + 1;*/
+	}
+}

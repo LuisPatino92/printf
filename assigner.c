@@ -17,6 +17,7 @@ void assigner(va_list args, char speci, int *len)
 	{"s", print_s},
 	{"d", print_d},
 	{"i", print_d},
+	{"b", print_b},
 	{NULL, NULL}
 	};
 
