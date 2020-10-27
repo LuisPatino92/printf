@@ -34,4 +34,7 @@ char *int_to_string(int number);
 int pot(int x, int y);
 long absolute(long n);
 char *write_null();
+void reverse_array(int *a, int n);
+void rev_string(char *s);
+int _strcmp(char *s1, char *s2);
 #endif /*!HOLBERTON_H*/
