@@ -21,7 +21,7 @@ void reverse_array(int *a, int n)
 		a[n - i] = aux;
 	}
 
-	#include "holberton.h"
+}
 
 /**
  * rev_string - reverse a String in its address memory
@@ -50,9 +50,6 @@ void rev_string(char *s)
 
 }
 
-}
-
-#include "holberton.h"
 
 /**
  * _strcmp - compares digit by digit of two strings
