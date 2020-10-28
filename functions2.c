@@ -84,3 +84,43 @@ void print_X(va_list argument, int *len)
 	free(string);
 	free(hex);
 }
+
+/**
+ * print_R - Prints a string in ROT13
+ *
+ * @argument: The Valist in its actual state
+ * @len: A pointer to the length counter
+ */
+
+void print_R(va_list argument, int *len)
+{
+	char *aux;
+
+	aux = va_arg(argument, char *);
+
+	if (aux == NULL)
+		return;
+
+	ROT13(aux, len);
+}
+
+/**
+ * print_r - Prints a string reversed
+ *
+ * @argument: The Valist in its actual state
+ * @len: A pointer to the length counter
+ */
+
+void print_r(va_list argument, int *len)
+{
+	char *aux;
+	int i;
+
+	aux = va_arg(argument, char *);
+
+	for (i = length(aux) - 1; i >= 0; i--)
+	{
+		write(1, aux + i, 1);
+		*len = *len + 1;
+	}
+}

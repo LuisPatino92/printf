@@ -12,8 +12,7 @@ void print_c(va_list argument, int *len)
 	char aux;
 
 	aux = va_arg(argument, int);
-	if (aux == '\0')
-		return;
+
 	write(1, &aux, 1);
 	(*len)++;
 }
