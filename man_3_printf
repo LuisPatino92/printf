@@ -1,19 +1,30 @@
-.TH _PRINTF 3 2020-10-26 GNU
+.TH _PRINTF "man 3 2020-10-26 GNU _printf man"
 .SH NAME
 _printf \- format and print data
 
 .SH SYNOPSIS
-    .B_printf(“string”, -opt variable);
-#include “holberton.h”
+
+.B #include “holberton.h”
+int _printf(const char *format, ...);
 
 
 .SH DESCRIPTION
-.B_Printf Show the string, number or any other format specifier created by the user.
+.B_Printf 
+Show the string, number or any other format specifier created by the user.
 Returns the number of characters that are printed (excluding the null byte used to end output to strings)
 
 
 .SH OPTIONS
-    -n,
+TP.
+BR. %c print a character
+TP.
+BR. %s print a  string variable
+TP.
+BR. %d  prints a signed decimal integer
+TP.
+BR. %i  prints a signed decimal integer
+TP.
+BR. %b  convert a decimal to binary
 
 .SH AUTHORS
 	Luis Alejandro Patino Arboleda - Jorge Daniel Urrego Escobar
