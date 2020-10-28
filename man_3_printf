@@ -27,10 +27,10 @@ TP.
 BR. %b  convert a decimal to binary
 
 .SH EXAMPLES
-To print "Learn Software development from the ground up" you would do as follow _printf("%s software development from the ground up", verb),
+To print "Learn Software development from the ground up" you would do as follow _printf("%s software development from the ground up", verb);
 where verb is a pointer to a string:
 
-
+To print the number 235 in base 10 to base 2 you would do as follow _printf("%b", 235); where the answer is 11101011.
 
 .SH AUTHORS
 	Luis Alejandro Patino Arboleda - Jorge Daniel Urrego Escobar
