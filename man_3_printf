@@ -9,7 +9,7 @@ int _printf(const char *format, ...);
 
 
 .SH DESCRIPTION
-.B_Printf 
+.B_Printf
 Show the string, number or any other format specifier created by the user.
 Returns the number of characters that are printed (excluding the null byte used to end output to strings)
 
