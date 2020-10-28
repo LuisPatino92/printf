@@ -1,3 +1,3 @@
 0x11. C - printf
 
-This is a version of printf() command made by Holberton students.
+This is our version of  the  command named printf() This version has been made by Holberton students.
