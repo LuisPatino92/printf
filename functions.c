@@ -74,6 +74,8 @@ void print_b(va_list argument, int *len)
 		;
 	if (aux == 0)
 		i = 1;
+	else if (aux < 0)
+		return;
 
 	binary = malloc(sizeof(int) * i);
 	if (binary == NULL)
