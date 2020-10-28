@@ -11,7 +11,7 @@
 void assigner(va_list args, char speci, int *len)
 {
 	int i;
-	char PO = '%';
+	char PO = '%', found = 'Y';
 	spec_assign asigner[] = {
 	{"c", print_c},
 	{"s", print_s},
@@ -32,6 +32,14 @@ void assigner(va_list args, char speci, int *len)
 		if (*(asigner[i].specifier) == speci)
 		{
 			asigner[i].solver(args, len);
+			found = 'N';
+			break;
 		}
+	}
+	if (found == 'Y')
+	{
+		write(1, &PO, 1);
+		write(1, &speci, 1);
+		*len = *len + 2;
 	}
 }

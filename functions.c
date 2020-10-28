@@ -66,26 +66,27 @@ void print_d(va_list argument, int *len)
 void print_b(va_list argument, int *len)
 {
 	long aux;
-	int *binary, j, i, exp, s;
+	int *binary, j, i, exp;
 
 	aux = va_arg(argument, long);
 
 	for (i = 0; aux / (pot(2, i)) >= 1; i++)
 		;
+	if (aux == 0)
+		i = 1;
 
 	binary = malloc(sizeof(int) * i);
 	if (binary == NULL)
 		return;
 
-	s = i;
 	exp = i - 1;
 
 	for (i = 1, j = 0; exp >= 0; exp--, i = i * 2, j++)
 	{
 		*(binary + j) = (aux / i) % 2;
 	}
-	printf("exp vale %d", s);
 
-	reverse_array(binary, s);
-	print_array_int(binary, s, len);
+	reverse_array(binary, j);
+	print_array_int(binary, j, len);
+	free(binary);
 }
