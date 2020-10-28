@@ -26,5 +26,11 @@ BR. %i  prints a signed decimal integer
 TP.
 BR. %b  convert a decimal to binary
 
+.SH EXAMPLES
+To print "Learn Software development from the ground up" you would do as follow _printf("%s software development from the ground up", verb),
+where verb is a pointer to a string:
+
+
+
 .SH AUTHORS
 	Luis Alejandro Patino Arboleda - Jorge Daniel Urrego Escobar
