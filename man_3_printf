@@ -13,18 +13,32 @@ int _printf(const char *format, ...);
 Show the string, number or any other format specifier created by the user.
 Returns the number of characters that are printed (excluding the null byte used to end output to strings)
 
-
-.SH OPTIONS
 TP.
-BR. %c print a character
+BR. %c  print a character
 TP.
-BR. %s print a  string variable
+BR. %s  print a  string variable
 TP.
 BR. %d  prints a signed decimal integer
 TP.
 BR. %i  prints a signed decimal integer
 TP.
 BR. %b  convert a decimal to binary
+TP.
+BR. %u  prints a unsigned decimal integer
+TP.
+BR. %o  prints Unsigned octal
+TP.
+BR. %x  prints Unsigned hexadecimal integer
+TP.
+BR. %X  prints Unsigned hexadecimal integer (uppercase)
+TP.
+BR. %R  prints the rot13'ed string
+TP.
+BR. %r  prints the reversed string
+
+.SH OPTIONS
+
+There are not options until this version
 
 .SH EXAMPLES
 To print "Learn Software development from the ground up" you would do as follow _printf("%s software development from the ground up", verb);
