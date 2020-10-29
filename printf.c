@@ -16,6 +16,9 @@ int _printf(const char *format, ...)
 
 	index = indexer(sizeofindex, format);
 
+	if (format == NULL || *(format) == '%' && *(format + 1) == '\0')
+		return;
+
 	write(1, format, length(format));
 	ltotal += length(format);
 
