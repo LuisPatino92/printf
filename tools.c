@@ -26,7 +26,7 @@ char *int_to_string(int number)
 
 	num_str = malloc(sizeof(char) * (len + 1));
 	if (num_str == NULL)
-		exit(1);
+		return;
 
 	i = 0;
 	if (number < 0)
