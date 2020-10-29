@@ -12,10 +12,10 @@ int _printf(const char *format, ...)
 	int *len = &ltotal;
 	va_list argument;
 
-	va_start(argument, format);
-	
 	if (format == NULL || (*(format) == '%' && *(format + 1) == '\0'))
 		return (0);
+
+	va_start(argument, format);
 
 	index = indexer(sizeofindex, format);
 
