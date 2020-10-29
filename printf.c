@@ -13,11 +13,11 @@ int _printf(const char *format, ...)
 	va_list argument;
 
 	va_start(argument, format);
-
-	index = indexer(sizeofindex, format);
-
+	
 	if (format == NULL || (*(format) == '%' && *(format + 1) == '\0'))
 		return (0);
+
+	index = indexer(sizeofindex, format);
 
 	write(1, format, length(format));
 	ltotal += length(format);
